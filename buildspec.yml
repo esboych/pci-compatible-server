@@ -1,0 +1,24 @@
+# used by AWS CodeBuild
+
+env:
+  variables:
+    JAVA_HOME: "/usr/lib/jvm/java-8-openjdk-amd64"
+  parameter-store:
+    LOGIN_PASSWORD: "dockerLoginPassword"
+
+phases:
+  install:
+    commands:
+      - echo Entered the install phase...
+      - apt-get update -y
+  post_build:
+    commands:
+      - echo Entered the post_build phase...
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - target/messageUtil-1.0.jar
+  discard-paths: yes
+cache:
+  paths:
+    - '/root/.m2/**/*'
