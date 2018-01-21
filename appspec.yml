@@ -4,7 +4,7 @@ version: 0.0
 os: linux
 files:
   - source: nginx/
-    destination: /etc/my-nginx/codedeploy1
+    destination: /etc/my-nginx/codedeploy
 
 #hooks:
 #  BeforeInstall:
