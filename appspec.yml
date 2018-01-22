@@ -3,8 +3,8 @@
 version: 0.0
 os: linux
 files:
-  - source: nginx/
-    destination: /etc/my-nginx/codedeploy
+  - source: nginx/config/nginx.conf
+    destination: /etc/nginx/
 
 #hooks:
 #  BeforeInstall:
