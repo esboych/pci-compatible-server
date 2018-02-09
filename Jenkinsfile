@@ -9,7 +9,7 @@ pipeline {
     }
     post {
         always {
-            echo 'example step 2'
+            echo 'example step 2-1'
         }
     }
 }
